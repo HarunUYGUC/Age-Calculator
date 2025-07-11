@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_green.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Age Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Age Calculator</h1>
+        <label for="selectDate">Tarih Seç:</label>
+        <div class="inputs">
+            <input type="text" id="selectDate" placeholder="GG.AA.YYYY">
+            <div class="calculate">Calculate</div>
+        </div>
+        <p id="result">
+            Yaşınızı hesaplamak için bir tarih seçin.
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/tr.js"></script>
+    <script>
+        flatpickr("#selectDate", {
+            locale: "tr",
+            dateFormat: "d.m.Y",
+            defaultDate: "today",
+            allowInput: true,
+            maxDate: "today"
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
